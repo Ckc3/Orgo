@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const commandCards = document.querySelectorAll('.command-card');
   const categories = document.querySelectorAll('.command-category');
 
-  // Category filtering
+
   categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Update active button
+
       categoryButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Search functionality
+
   searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Show/hide categories based on visible commands
+
     categories.forEach(category => {
       const visibleCommands = category.querySelectorAll('.command-card[style=""]').length;
       if (visibleCommands === 0) {
