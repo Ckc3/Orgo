@@ -1,0 +1,187 @@
+
+:root {
+  --primary-color: #5865F2;
+  --secondary-color: #2c2f33;
+  --text-color: #ffffff;
+  --background-color: #1a1b1e;
+  --glass-bg: rgba(44, 47, 51, 0.3);
+  --gradient: linear-gradient(135deg, var(--primary-color), #7289da);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top right, #2a2d36, var(--background-color));
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.banner {
+  width: 100%;
+  height: 250px;
+  background-image: url('https://cdn.discordapp.com/banners/1375304096910934026/82b7fb06de3729bcae8d0565a6f9b017.webp?size=1024');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, var(--background-color), transparent);
+}
+
+.profile {
+  text-align: center;
+  margin-top: -75px;
+  position: relative;
+  z-index: 2;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--background-color);
+  box-shadow: 0 0 20px rgba(88, 101, 242, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
+}
+
+.profile h1 {
+  margin-top: 15px;
+  font-size: 2.8em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--glass-bg);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(88, 101, 242, 0.2);
+}
+
+.feature-card i {
+  font-size: 3em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  margin: 0.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.primary {
+  background: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+}
+
+.secondary {
+  background: var(--glass-bg);
+  color: var(--text-color);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.description {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 1.2em;
+}
+
+code {
+  background: var(--glass-bg);
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-family: 'Fira Code', monospace;
+  backdrop-filter: blur(5px);
+}
+
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile h1 {
+    font-size: 2.2em;
+  }
+}
