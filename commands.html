@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ordo Bot - Commands</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="banner"></div>
+    <div class="profile">
+      <img src="https://cdn.discordapp.com/avatars/1375304096910934026/46562e49b8eb049e0d8de7b601b97114.webp?size=1024" alt="Ordo Bot">
+      <h1>Ordo Commands</h1>
+      <p class="command-count">Total Commands: 35</p>
+    </div>
+  </header>
+  
+  <main>
+    <nav class="command-nav">
+      <div class="category-buttons">
+        <button class="category-btn active" data-category="all">All Commands</button>
+        <button class="category-btn" data-category="moderation">Moderation</button>
+        <button class="category-btn" data-category="economy">Economy</button>
+        <button class="category-btn" data-category="games">Games</button>
+        <button class="category-btn" data-category="utility">Utility</button>
+      </div>
+      <a href="index.html" class="button secondary">← Back to Home</a>
+    </nav>
+
+    <div class="search-box">
+      <input type="text" placeholder="Search commands..." id="searchCommands">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <section class="command-list">
+      <div class="command-category" id="moderation">
+        <h2>Moderation <span class="category-count">8</span></h2>
+        <div class="command-grid">
+          <div class="command-card">
+            <h3>/kick</h3>
+            <p>Kick a member from the server</p>
+          </div>
+          <div class="command-card">
+            <h3>/ban</h3>
+            <p>Ban a member from the server</p>
+          </div>
+          <div class="command-card">
+            <h3>/warn</h3>
+            <p>Warn a user</p>
+          </div>
+          <div class="command-card">
+            <h3>/mute</h3>
+            <p>Mute a user</p>
+          </div>
+          <div class="command-card">
+            <h3>/unmute</h3>
+            <p>Unmute a user</p>
+          </div>
+          <div class="command-card">
+            <h3>/clear</h3>
+            <p>Clear messages in a channel</p>
+          </div>
+          <div class="command-card">
+            <h3>/giverole</h3>
+            <p>Give a role to a user</p>
+          </div>
+          <div class="command-card">
+            <h3>/removerole</h3>
+            <p>Remove a role from a user</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="command-category" id="economy">
+        <h2>Economy <span class="category-count">7</span></h2>
+        <div class="command-grid">
+          <div class="command-card">
+            <h3>/balance</h3>
+            <p>Check your balance</p>
+          </div>
+          <div class="command-card">
+            <h3>/daily</h3>
+            <p>Claim daily rewards</p>
+          </div>
+          <div class="command-card">
+            <h3>/give</h3>
+            <p>Give coins to another user</p>
+          </div>
+          <div class="command-card">
+            <h3>/shop</h3>
+            <p>View available items in shop</p>
+          </div>
+          <div class="command-card">
+            <h3>/inventory</h3>
+            <p>Check your inventory</p>
+          </div>
+          <div class="command-card">
+            <h3>/leaderboard</h3>
+            <p>View the richest players</p>
+          </div>
+          <div class="command-card">
+            <h3>/profile</h3>
+            <p>View your profile</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="command-category" id="games">
+        <h2>Games <span class="category-count">11</span></h2>
+        <div class="command-grid">
+          <div class="command-card">
+            <h3>/coinflip</h3>
+            <p>Flip a coin to win coins</p>
+          </div>
+          <div class="command-card">
+            <h3>/slots</h3>
+            <p>Play the slot machine</p>
+          </div>
+          <div class="command-card">
+            <h3>/roulette</h3>
+            <p>Bet on red or black</p>
+          </div>
+          <div class="command-card">
+            <h3>/blackjack</h3>
+            <p>Play blackjack</p>
+          </div>
+          <div class="command-card">
+            <h3>/fish</h3>
+            <p>Go fishing for rewards</p>
+          </div>
+          <div class="command-card">
+            <h3>/race</h3>
+            <p>Join a racing game</p>
+          </div>
+          <div class="command-card">
+            <h3>/guess</h3>
+            <p>Guess the number game</p>
+          </div>
+          <div class="command-card">
+            <h3>/boss</h3>
+            <p>Fight a boss battle</p>
+          </div>
+          <div class="command-card">
+            <h3>/reaction</h3>
+            <p>Test your reaction speed</p>
+          </div>
+          <div class="command-card">
+            <h3>/typingrace</h3>
+            <p>Race against time typing</p>
+          </div>
+          <div class="command-card">
+            <h3>/adventure</h3>
+            <p>Go on an adventure</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="command-category" id="utility">
+        <h2>Utility <span class="category-count">9</span></h2>
+        <div class="command-grid">
+          <div class="command-card">
+            <h3>/help</h3>
+            <p>Show all commands</p>
+          </div>
+          <div class="command-card">
+            <h3>/serverinfo</h3>
+            <p>Display server information</p>
+          </div>
+          <div class="command-card">
+            <h3>/userinfo</h3>
+            <p>Show user information</p>
+          </div>
+          <div class="command-card">
+            <h3>/avatar</h3>
+            <p>Display user's avatar</p>
+          </div>
+          <div class="command-card">
+            <h3>/translate</h3>
+            <p>Translate text to another language</p>
+          </div>
+          <div class="command-card">
+            <h3>/ticket</h3>
+            <p>Open a support ticket</p>
+          </div>
+          <div class="command-card">
+            <h3>/report</h3>
+            <p>Report a user</p>
+          </div>
+          <div class="command-card">
+            <h3>/suggest</h3>
+            <p>Submit a suggestion</p>
+          </div>
+          <div class="command-card">
+            <h3>/remind</h3>
+            <p>Set a reminder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
