@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #6366F1;
-  --secondary-color: #2D3748;
+  --primary-color: #8B5CF6;
+  --secondary-color: #2D1B69;
   --text-color: #F8FAFC;
-  --background-color: #0F172A;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --gradient: linear-gradient(135deg, #6366F1, #3B82F6);
-  --accent-glow: 0 0 30px rgba(99, 102, 241, 0.3);
+  --background-color: #0F0A1A;
+  --glass-bg: rgba(139, 92, 246, 0.05);
+  --gradient: linear-gradient(135deg, #8B5CF6, #A855F7);
+  --accent-glow: 0 0 30px rgba(139, 92, 246, 0.4);
 }
 
 * {
@@ -18,8 +18,8 @@
 body {
   font-family: 'Inter', sans-serif;
   background: 
-    radial-gradient(circle at 0% 0%, #312E81 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, #1E40AF 0%, transparent 50%),
+    radial-gradient(circle at 0% 0%, #4C1D95 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, #6B21A8 0%, transparent 50%),
     var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -30,7 +30,7 @@ body {
   width: 100%;
   height: 350px;
   background: 
-    linear-gradient(45deg, rgba(99, 102, 241, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%),
+    linear-gradient(45deg, rgba(139, 92, 246, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%),
     repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 2px, transparent 2px, transparent 10px);
   position: relative;
   overflow: hidden;
@@ -107,7 +107,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.15), transparent);
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
@@ -183,7 +183,7 @@ main {
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
 }
 
 .description {
@@ -193,11 +193,11 @@ main {
 }
 
 code {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(139, 92, 246, 0.15);
   padding: 0.4rem 1rem;
   border-radius: 8px;
   font-family: 'Fira Code', monospace;
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .command-count {
@@ -329,15 +329,15 @@ code {
 
 .command-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
-  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.4);
 }
 
 .command-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.15), transparent);
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
@@ -359,6 +359,107 @@ code {
   font-size: 0.9em;
 }
 
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.legal-card {
+  background: var(--glass-bg);
+  border-radius: 24px;
+  padding: 3rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.legal-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.legal-header i {
+  font-size: 3em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.legal-header h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.effective-date {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.legal-content {
+  line-height: 1.8;
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(139, 92, 246, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.section {
+  margin: 2rem 0;
+}
+
+.section h3 {
+  color: var(--primary-color);
+  font-size: 1.4em;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.section li {
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.section a:hover {
+  color: #A855F7;
+  text-decoration: underline;
+}
+
+.legal-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .features {
     grid-template-columns: 1fr;
@@ -370,5 +471,18 @@ code {
 
   .command-grid {
     grid-template-columns: 1fr;
+  }
+
+  .legal-card {
+    padding: 2rem;
+  }
+  
+  .legal-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .legal-navigation {
+    flex-direction: column;
+    align-items: center;
   }
 }
